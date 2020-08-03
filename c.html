@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="#" >
+    <script type="text/javascript">
+      var guess;
+        var correct;
+        var turns;
+        
+        var output;
+        var txtguess;
+        var btnagain;
+      function init(){
+        output = document.getElementById("output");
+        txtguess = document.getElementById("guess");
+        btnagain = document.getElementById("again");
+        
+        btnagain.style.display = "none";
+        
+        turns = 0;
+      
+      output.innerHTML = "I have a number between 0 and 100. Guess the number, I will tell too low, too high or Correct!";
+      
+      correct = parseInt(Math.random()*100);
+      console.log(correct);
+      
+      txtguess .focus();
+        
+      }
+      function game(){
+        turns++;
+        
+        response = turns + ") ";
+        guess = parseInt(txtguess.value);
+        if(guess < correct){
+          response += "Too low";
+        }else if(guess > correct){
+          response += "Too high";
+        }else if(guess == correct){
+            response += "Correct!";
+             btnagain.style.display = "block";
+        }else{
+          response += "Please enter a number between 1 and 100";
+        }
+        output.innerHTML = response;
+      }
+      
+       </script>
+       
+    <style>
+         button{
+            display: block;
+          clear: both;
+          margin-left: auto;
+          margin-right: auto;
+          border: none;
+          background-color:purple;
+          color: cornsilk;
+          
+         }
+         h1{
+          text-align: center;
+         }
+         div{
+          text-align: center;
+          font-size: 20px;
+         }
+
+        fieldset{
+            width: 600px; 
+            margin: auto;
+            border: none;
+        }
+        label{
+            float: left;
+            clear: left;
+            padding-right: 1em;
+            text-align: right;
+            width: 250px;
+        }
+        input{
+            float: left;
+        }
+        body{
+          background: #2093C3;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+
+        }
+
+    </style>
+  </head>
+  <body onload="init()">
+    <h1 class="style.text-align:center">Number guesser</h1>
+    <form>
+    <fieldset>
+        <div id="output">
+            I have a number guess
+        </div>
+        <br>
+      <label for="guess">Your guess</label>
+      <input type="text" id="guess"><br><br>
+        <button type="button" onclick="game()">
+    Check your guess
+         </button><br>
+        <button type="button" id="again" onclick="init()">
+    Try again
+         </button>
+       
+        
+    </fieldset></form>
+  </body>
+</html>
