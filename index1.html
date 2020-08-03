@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="http://zavrel.net/normalize.css">
+  <title>Patrick's blog</title>
+  <style>
+    img{
+      width: 150px;
+      margin: 40px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+    header{
+      text-align: center;
+      background: url("https://i.pinimg.com/originals/ce/22/9e/ce229ef2a6348172f65e2fb6df2e2d57.jpg") blue;
+      color: white;
+      background-size: cover;
+    }
+    ul{
+      list-style-type:none;
+      background: rgba(205,41,144,0.7);
+    }
+    li{
+      display: inline;
+      padding: 0px 10px 0px 10px;
+      margin:0px;
+    }
+    a{
+      color: white;
+    }
+    h1{
+      font-size: 70px;
+    }
+    body{
+      background: #2093C3;
+    }
+    div{
+      margin: 0px;
+      padding: 10px;
+      font-family: 'Dancing Script', cursive;
+      font-size:30px;
+    }
+    h2{
+      color: purple;
+    }
+    p{
+      color:white;
+    }
+    @media(max-width: 500px){
+      body{
+        background: #00A4A9;
+      }
+      h1{
+        font-size: 36px;
+      }
+      li{
+        display: block;
+        padding: 5px;
+      }
+      div{
+      font-size: 25px;
+    }
+    }
+    .like{
+      font-family: 'Dancing Script', cursive;
+      color: white;
+      background: purple;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="sil2.jpg" alt="soon to change">
+    <h1>Cutest girl!</h1>
+     <ul>
+    <li class="game"><a href="https://www.youtube.com/" id="li">About her</a></li>
+    <li><a href="numbergame.html" id="li">Games</a></li>
+    <li class="game"><a href="https://www.bbc.com/news" id="li">News</a></li>
+  </ul>
+  </header>
+  <div>
+  <h2>oh!..uf it's a long story</h2>
+  <p>... here it goes... long ago.. 'it' started. It refers to something, this something is thought as a wonder era of most benevolent blessing any human can think..  </p>
+  <h2>The core of 'It'</h2>
+  <p>Just like all blogs i'm trying to keep this interesting but helpless, should take this to a story between a boy and a girl. Please dont judge which might be obvious, this is a story of horror, comedy, romance, tragedy, action, thirller etc... Just kidding!.. I leave it to you. But the girl is really cute! </p>
+<h2>Story</h2>
+<p>Once upon a time, a princess of a fairy land had to leave her parents and kingdom to make "THE JOURNEY", to wonderland. On a new moon day she started. All along her journey she should not reveal her identity nor use any of her magical powers. Little princess was like a bird out of a cage, she could only sense freedom.<br><br><span style="float: right;">(to be continued...)</span></p>
+<button type="default" class="like" name="button">Like</button>
+<script>
+  $("button").on('click',function(){
+    alert("THANK YOU! Peace be with you!")
+  });
+
+  $(".game").on('click',function(){
+    alert("Sorry.. Contents will be updated soon. Thank you! Come back and try games.")
+  });
+
+</script>
+</div>
+</body>
